@@ -1,0 +1,29 @@
+@hostname = http://localhost:3000
+
+GET {{hostname}}/users
+
+###
+
+POST {{hostname}}/signup
+Content-Type: application/json
+
+{
+  "name": "Timmy",
+  "email": "timmy@email.com"
+}
+
+###
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "Hello World",
+  "content": "Shitty World this",
+  "authorEmail": "timmy@email.com"
+}
+
+###
+
+PUT http://localhost:3000/post/__OBJECT_ID__/views
+
